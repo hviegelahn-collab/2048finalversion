@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>2048 Orange</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="manifest" href="manifest.json">
   <meta name="theme-color" content="#f5f0e6">
+  <link rel="icon" type="image/png" href="./icon.png">
+  <title>2048 Orange</title>
+  <link rel="stylesheet" href="./style.css">
+  <link rel="apple-touch-icon" href="./icon.png">
 </head>
 <body>
-
   <div class="container">
     <h1>2048</h1>
     <div class="score-container">
@@ -21,30 +21,12 @@
     </div>
     <div class="game-container" id="game-container"></div>
   </div>
-
   <div class="overlay" id="game-over">
     <div class="overlay-content">
       <h2>Game Over</h2>
       <button id="restart-overlay">Restart</button>
     </div>
   </div>
-
   <script src="script.js"></script>
-  <script>
-    if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('./sw.js')
-        .then(() => console.log('Service Worker registered'))
-        .catch(err => console.log('Service Worker failed', err));
-    }
-  </script>
- 
-  <script>
-if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('./sw.js')
-    .then(() => console.log('Service Worker registered'))
-    .catch(err => console.log('Service Worker failed', err));
-}
-</script>
-  
 </body>
 </html>
